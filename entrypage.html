@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="entrypage.css">
+    <script src="entrypage.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="shortcut icon" href="chatbot.png" type="image/x-icon">
+    <title>Oliver-ChatBot</title>
+</head>
+<body>   
+    <h1>
+        <span>O</span>
+        <span>L</span>
+        <span>I</span>
+        <span>V</span>
+        <span>E</span>
+        <span>R</span>
+        <h2 id="secondheading">Your A.I Powered Chatbot</h2>
+    </h1>
+
+
+    <a href="javascript:void(0);" id="launchButton">Let's Start</a>
+    <audio id="loadingSound" src="loading (2).mp3"></audio>
+
+    <div id="loadingMessage">
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
+    </div>
+    <div id="animationOverlay">
+        <div id="overlaySpinner" class="loading-spinner"></div>
+    </div>
+    
+    <script>
+        const launchButton = document.getElementById("launchButton");
+        const loadingMessage = document.getElementById("loadingMessage");
+        const animationOverlay = document.getElementById("animationOverlay");
+        const loadingSound = document.getElementById("loadingSound");
+        launchButton.addEventListener("click", () => {
+        launchButton.style.display = "none";
+        loadingMessage.style.display = "block";
+        animationOverlay.style.display = "block";
+        loadingSound.play(); 
+        setTimeout(() => {
+                window.location.href = "index1.html";
+            }, 3000);
+        });
+    </script>
+    
+</body>
+</html>

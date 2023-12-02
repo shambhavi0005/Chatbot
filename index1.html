@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- The document type is HTML and english language is used here -->
+<head>
+    <meta charset="UTF-8"> 
+    <!-- have to find!!!! -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- the above two lines are permanently present with every initial code we type  -->
+    
+    <title>Dynamic Chatbot</title>
+    <!-- the title visible in the tab view -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- rel stands for relationship, so here we link our stylesheet(css) in the head tag of  html body -->
+    
+    <script src="script.js" defer></script>
+    <!-- again, here we link our js file to the html body -->
+
+    <link rel="shortcut icon" href="chatbot.png" type="image/x-icon">
+    <!-- used to show the favicon in the tab -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- external fonts used in the chatbot -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- small icon used in the chatbot in the start of every conversation -->
+
+</head>
+<body class="show-chatbot">
+<!-- an external body to make it easy for us to give single line commands -->
+
+    <button id="mode-toggle" class="mode-toggle-button">
+        <!-- id acts as an identifier and class is to make it easy for us to access further in the code-->
+
+        <i class="fas fa-adjust"></i>
+
+    </button>
+
+    <div class="chatbot">
+        <header>
+            <h2>Chatbot</h2>
+            <!-- to give the heading in the chatbot -->
+
+        </header> 
+        <ul class="chatbox">
+            <!-- it is an unordered list which contains the logo of the chatbot and the greeting msg -->
+
+            <li class="chat incoming">
+                <span class="material-symbols-outlined">Smart_toy</span>
+                <!-- material symbol outline is a predefined class which we have imported above and it is used to display the logo of the chatbot -->
+
+                <p>hi there<br> How can I help you today?</p>
+                <!-- p represents paragraph -->
+
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea placeholder="Enter a message..." required></textarea>
+            <span id="send-btn" >send</span>
+            <button id="voiceRecognitionButton">Start Voice Input</button>
+        </div>
+    </div>
+    <div class="feedback-section">
+        <button class="feedback-btn" id="positive-feedback">👍 Positive</button>
+        <button class="feedback-btn" id="negative-feedback">👎 Negative</button>
+    </div>
+    <script>
+        const modeToggle = document.getElementById("mode-toggle");
+        const body = document.body;
+        modeToggle.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+        });
+    </script>
+</body>
+</html>
